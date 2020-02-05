@@ -28,9 +28,9 @@ class App extends Component {
 
   config = {
     pages: [
+      'pages/mechanism/index',
       'pages/equipments/index',
-      'pages/team/index',
-      'pages/mechanism/index'
+      'pages/team/index'
     ],
     window: {
       backgroundTextStyle: 'light',
@@ -43,24 +43,25 @@ class App extends Component {
       selectedColor: "#b4282d",
       backgroundColor: "#fafafa",
       borderStyle: 'black',
-      list: [{
+      list: [
+        {
+          pagePath: "pages/mechanism/index",
+          iconPath: "./assets/tab-bar/mechanism.png",
+          selectedIconPath: "./assets/tab-bar/mechanism-active.png",
+          text: "云顶之弈"
+        },
+        {
         pagePath: "pages/team/index",
         iconPath: "./assets/tab-bar/team.png",
         selectedIconPath: "./assets/tab-bar/team-active.png",
         text: "阵容"
-      }, 
-      {
-        pagePath: "pages/mechanism/index",
-        iconPath: "./assets/tab-bar/mechanism.png",
-        selectedIconPath: "./assets/tab-bar/mechanism-active.png",
-        text: "云顶之弈"
-      },
-      {
-        pagePath: "pages/equipments/index",
-        iconPath: "./assets/tab-bar/equipment.png",
-        selectedIconPath: "./assets/tab-bar/equipment-active.png",
-        text: "装备"
-      }]
+        }, 
+        {
+          pagePath: "pages/equipments/index",
+          iconPath: "./assets/tab-bar/equipment.png",
+          selectedIconPath: "./assets/tab-bar/equipment-active.png",
+          text: "装备"
+        }]
     }
   }
 

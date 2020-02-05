@@ -77,7 +77,7 @@ const equipments = observable({
     },
     {
       name: "卢安娜的飓风",
-      description: "普通攻击会对附近的另一名敌人发射一个额外的弹体，造成携带者60%攻击力的伤害并附带攻击特效",
+      description: "攻击两名额外敌人造成50%伤害",
       icon: landjf,
       compose: ["fjdp", "fqzg"]
     },
