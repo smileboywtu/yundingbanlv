@@ -1,0 +1,41 @@
+.container {
+}
+
+.hero-list-container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-grow: 1;
+  margin: 15px 0 0 0px;
+}
+
+.hero-list-container-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 20px;
+}
+
+.hero-list-container-right .career-list {
+  font-size: 9pt;
+  color:#576b95;
+}
+
+.hero-img {
+  margin-top: 15px;
+  width: 200px;
+  height: 102px;
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+.hero-skill {
+  font-size: 10pt;
+  color: #353535;
+}
+
+.hero-description {
+  font-size: 8pt;
+  color: #353535;
+  line-height: 28px;
+}

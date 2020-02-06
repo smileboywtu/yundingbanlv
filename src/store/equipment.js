@@ -24,10 +24,33 @@ import gsdkbzr from '../assets/equipments/gsdkbzr.png'
 import wydb from '../assets/equipments/wydb.png'
 import hkskjqz from '../assets/equipments/hkskjqz.png'
 import sj from '../assets/equipments/sj.png'
+import lzhh from '../assets/equipments/lzhh.png'
+import shsbj from '../assets/equipments/shsbj.png'
+import gtlyzj from '../assets/equipments/gtlyzj.png'
+
 
 const equipments = observable({
   // 最终装备
-  equipments: [{
+  equipments: [
+    {
+      name: "钢铁烈焰之匣",
+      description: "战斗前为自己和左右两格内英雄施加8秒250点护盾",
+      icon: gtlyzj,
+      compose: ["wydb", "szj"]
+    },
+    {
+      name: "守护神板甲",
+      description: "携带者也是一名守护神",
+      icon: shsbj,
+      compose: ["jcz", "szj"]
+    },
+    {
+      name: "离子火花",
+      description: "敌人施法掉100血",
+      icon: lzhh,
+      compose: ["wydb", "fjdp"]
+    },
+    {
       name: "肃静",
       description: "普通攻击有50%对敌人造成3秒沉默",
       icon: sj,

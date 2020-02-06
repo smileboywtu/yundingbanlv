@@ -1,8 +1,9 @@
 import Taro, { Component } from "@tarojs/taro";
-import { View, Text, ScrollView, Image } from "@tarojs/components";
+import { View, Text } from "@tarojs/components";
 
 import "./index.scss";
 import Cards from "./card";
+import UpdateTime from "../updateTime";
 
 class Equipments extends Component {
   render() {
@@ -10,6 +11,7 @@ class Equipments extends Component {
       <View>
         <View className="title-container ">
           <Text className="title">云顶之弈装备</Text>
+          <UpdateTime />
         </View>
         <Cards />
       </View>

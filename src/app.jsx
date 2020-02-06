@@ -2,6 +2,8 @@ import Taro, { Component } from '@tarojs/taro'
 import { Provider } from '@tarojs/mobx'
 import countStore from './store/countStore'
 import equipments from './store/equipment'
+import updateTime from './store/updateTime'
+import machanismStore from './store/machanism'
 
 import './app.scss'
 
@@ -13,7 +15,9 @@ import './app.scss'
 
 const store = {
   countStore,
-  equipments
+  equipments,
+  updateTime,
+  machanismStore
 }
 
 class App extends Component {
@@ -30,7 +34,7 @@ class App extends Component {
     pages: [
       'pages/mechanism/index',
       'pages/equipments/index',
-      'pages/team/index'
+      'pages/team/index',
     ],
     window: {
       backgroundTextStyle: 'light',

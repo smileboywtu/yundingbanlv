@@ -1,0 +1,40 @@
+.container-title {
+  text-align: center;
+  font-size: 14pt;
+}
+
+.container-title .career-title {
+}
+
+.container {
+  margin-top: 20px;
+  padding: 0 60px 0 60px;
+}
+
+.container-content {
+  margin-top: 25px;
+}
+
+.career-container {
+  margin-top: 10px;
+  border: 1px;
+  border-style: solid;
+  padding: 10px;
+  box-shadow: 3px 3px 3px 2px #353535;
+}
+
+.career-switch {
+  margin-top: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.radio-item {
+  width: 160px;
+  // border: 1px;
+  // border-color: #b2b2b2;
+  // border-radius: 31rpx;
+  // border-style: solid;
+  // background-color: #b2b2b2;
+}

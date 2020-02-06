@@ -5,13 +5,14 @@ import { inject, observer } from "@tarojs/mobx";
 import "./index.scss";
 
 @inject((stores, props) => ({
-  equipments: stores.equipments
+  equipments: stores.equipments,
+  updateTime: stores.updateTime
 }))
 @observer
 class Cards extends Component {
   render() {
     const {
-      equipments: { equipments, components }
+      equipments: { equipments, components },
     } = this.props;
     return (
       <ScrollView className="container-scroll">
