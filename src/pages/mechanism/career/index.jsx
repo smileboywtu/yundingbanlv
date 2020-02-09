@@ -55,12 +55,12 @@ class Career extends Component {
                 const [number, effect] = number_people;
                 return (
                   <View key={number_index}>
-                    <Text>{number}: </Text>
-                    <Text>{effect}</Text>
+                    <Text className="career-effect-number">{number}</Text>
+                    <Text className="career-effect-descript"> {effect}</Text>
                   </View>
                 );
               })}
-              <Text>英雄列表：</Text>
+              <Text style="margin-top: 5px;">英雄列表：</Text>
               <Hero heros={heros} names={career.people}></Hero>
             </View>
           }

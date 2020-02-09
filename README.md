@@ -40,7 +40,6 @@ git clone git@github.com:smileboywtu/yundingbanlv.git
 cd yundingbanlv
 npm i
 npm run dev:weapp
-
 ```
 
 使用微信小程序开发工具打开目录即可预览。
