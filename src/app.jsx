@@ -4,6 +4,7 @@ import countStore from './store/countStore'
 import equipments from './store/equipment'
 import updateTime from './store/updateTime'
 import machanismStore from './store/machanism'
+import teamStore from './store/team'
 
 import './app.scss'
 
@@ -14,10 +15,10 @@ import './app.scss'
 // }
 
 const store = {
-  countStore,
   equipments,
   updateTime,
-  machanismStore
+  machanismStore,
+  teamStore
 }
 
 class App extends Component {

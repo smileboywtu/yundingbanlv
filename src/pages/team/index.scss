@@ -1,5 +1,17 @@
-.index {
-    color: red;
-    font-size: 2rem;
-    // font-family: 'Times New Roman', Times, serif
+.title-container {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.title {
+  font-size: 17pt;
+  color: #353535;
+}
+
+.content-container {
+  margin-top: 30px;
+}
+
+.content-container .team-detail {
+    padding: 0px 60px 0 60px;
 }

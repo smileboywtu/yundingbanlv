@@ -1,60 +1,43 @@
-import Taro, { Component } from '@tarojs/taro'
-import { View, Text, Progress, Button } from '@tarojs/components'
-import {inject, observer} from '@tarojs/mobx'
-import './index.scss'
+import Taro, { Component } from "@tarojs/taro";
+import { observer, inject } from "@tarojs/mobx";
+import { View, Text, ScrollView } from "@tarojs/components";
 
-@inject((store, props)=>({
-  countStore: store.countStore
+import UpdateTime from "../updateTime";
+import TeamDetail from "./teamDetail";
+import "./index.scss";
+
+@inject((stores, props) => ({
+  teamStore: stores.teamStore
 }))
 @observer
 class Team extends Component {
-
-  componentWillMount () { }
-
-  componentDidMount () { }
-
-  componentWillUnmount () { }
-
-  componentDidShow () { }
-
-  componentDidHide () { }
-
-  config = {
-    navigationBarTitleText: '首页'
-  }
-
-  increment = () => {
-    const { countStore } = this.props
-    countStore.increment()
-  }
-
-  decrement = () => {
-    const { countStore } = this.props
-    countStore.decrement()
-  }
-
-  incrementAsync = () => {
-    const { countStore } = this.props
-    countStore.incrementAsync()
-  }
-
-  render () {
-    const { countStore: { counter } } = this.props;
+  render() {
+    const {
+      teamStore: { teams }
+    } = this.props;
     return (
-      <View className='index'>
-        <Text>Hello world!</Text>
-        <Progress percent={20} showInfo strokeWidth={2} />
-        <Button size='mini' type='primary'>按钮</Button>
-        <View>
-          <Text>current size: {counter}</Text>
-          <Button size='default' type='primary' onClick={this.increment}>增加</Button>
-          <Button size='default' type='warn' onClick={this.decrement}>减少</Button>
+      <View>
+        <View className="title-container">
+          <Text className="title">版本热门阵容</Text>
+          <UpdateTime></UpdateTime>
         </View>
-        
+
+        <ScrollView className="content-container">
+          <View className="team-detail">
+            {teams.map((item, team_index) => {
+              return (
+                <TeamDetail
+                  key={item + team_index}
+                  compose={item.compose}
+                  heros={item.heros}
+                ></TeamDetail>
+              );
+            })}
+          </View>
+        </ScrollView>
       </View>
-    )
+    );
   }
 }
 
-
-export default Team
+export default Team;
