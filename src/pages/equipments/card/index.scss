@@ -1,13 +1,12 @@
 .container-scroll {
   margin: 35px 0 0 0;
-//   border-top: #b2b2b2;
-//   border-top-width: 0.5px;
-//   border-top-style: solid;
-//   border-top-left-radius: 25px;
-//   border-top-right-radius: 25px;
-//   padding-top: 10px;
-//   background-color: #576b95;
-
+  //   border-top: #b2b2b2;
+  //   border-top-width: 0.5px;
+  //   border-top-style: solid;
+  //   border-top-left-radius: 25px;
+  //   border-top-right-radius: 25px;
+  //   padding-top: 10px;
+  //   background-color: #576b95;
 }
 
 .container {
@@ -26,10 +25,10 @@
   flex-wrap: wrap;
   align-items: flex-start;
   flex-grow: 1;
-  margin-left: 20px;;
-//   border-bottom: 0.5px;
-//   border-bottom-style: solid;
-//   border-bottom-color: #b2b2b2;
+  margin-left: 20px;
+  //   border-bottom: 0.5px;
+  //   border-bottom-style: solid;
+  //   border-bottom-color: #b2b2b2;
 }
 
 .equipment-title {
@@ -54,4 +53,16 @@
   padding: 5px;
   vertical-align: middle;
   margin: 3px;
+}
+
+.container-scroll .equipment-switch {
+  margin: 10px 15px 0 15px;
+  padding: 20px;
+  border: 1px;
+  border-style: solid;
+  box-shadow: 0px 3px 3px 3px #353535;
+}
+
+.container-scroll .equipment-switch .radio-item {
+  width: 200px;
 }

@@ -48,11 +48,79 @@ import jkdxq from '../assets/equipments/jkdxq.png'
 import lf from '../assets/equipments/lf.png'
 import wjzr from '../assets/equipments/wjzr.png'
 import fyxszl from '../assets/equipments/fyxszl.png'
+import zghs from '../assets/equipments/zghs.png'
+import zyzs from '../assets/equipments/zyzs.png'
+import sy from '../assets/equipments/sy.png'
+import fjzz from '../assets/equipments/fjzz.png'
+import qzst from '../assets/equipments/qzst.png'
+import swzr from '../assets/equipments/swzr.png'
+import jrzs from '../assets/equipments/jrzs.png'
 
 
 const equipments = observable({
+
+  classify: {
+    "special":  "特殊装备",
+    "smz": "生命值",
+    "mk": "魔抗",
+    "jnsh": "技能伤害",
+    "hj": "护甲类",
+    "gsl": "攻速类",
+    "gjl": "攻击类",
+    "flz": "法力值",
+    "bjsb": "暴击闪避"
+  },
+
   // 最终装备
-  equipments: [
+  equipments: [{
+      name: "巨人杀手",
+      description: "携带者普通攻击造成目标 8% 最大生命值真实伤害",
+      icon: jrzs,
+      compose: ["bfdj", "fqzg"],
+      classify: 'special',
+    },
+    {
+      name: "死亡之刃",
+      description: "击杀或助攻可获得一层被动： +15 攻击力",
+      icon: swzr,
+      compose: ["bfdj", "bfdj"]
+    },
+    {
+      name: "窃贼手套",
+      description: "佩戴者装备 2 件临时装备，装备品质基于英雄等级（占三个装备格）",
+      icon: qzst,
+      compose: ["qt", "qt"]
+    },
+    {
+      name: "伏击之爪",
+      description: "佩戴者获得护盾，可格挡敌人技能，打破护盾将晕眩敌方 4 秒",
+      icon: fjzz,
+      compose: ["jryd", "qt"]
+    },
+    {
+      name: "水银",
+      description: "在携带着被控制时，净化该控制效果，冷却时间为 3 秒",
+      icon: sy,
+      compose: ["fjdp", "qt"]
+    },
+    {
+      name: "冰脉护手",
+      description: "闪避时，创造一个冰霜领域，领域内敌人减缓 35% 攻速",
+      icon: zyzs,
+      compose: ["qt", "szj"]
+    },
+    {
+      name: "珠光护手",
+      description: "回合开始时，造成伤害 +40% 或攻击在命中时回复 40 生命值",
+      icon: zyzs,
+      compose: ["nszl", "qt"]
+    },
+    {
+      name: "珠光护手",
+      description: "携带者的技能可以暴击",
+      icon: zghs,
+      compose: ["wydb", "qt"]
+    },
     {
       name: "复用型十字弩",
       description: "佩戴者死亡时装备至其他友军，每次装备提供额外 30% 攻速和暴击几率，无上限",
@@ -75,13 +143,15 @@ const equipments = observable({
       name: "基克的先驱",
       description: "邻格友军加 20% 攻速",
       icon: jkdxq,
-      compose: ["bfdj", "jryd"]
+      compose: ["bfdj", "jryd"],
+      classify: 'smz'
     },
     {
       name: "幽梦之灵",
       description: "佩戴者也视为刺客",
       icon: ymzl,
-      compose: ["bfdj", "jcz"]
+      compose: ["bfdj", "jcz"],
+      classify: 'special'
     },
     {
       name: "地狱火熔渣",
@@ -93,7 +163,8 @@ const equipments = observable({
       name: "狂徒铠甲",
       description: "每秒恢复已失去生命值的 6%",
       icon: ktkj,
-      compose: ["jryd", "jryd"]
+      compose: ["jryd", "jryd"],
+      classify: 'smz'
     },
     {
       name: "巨型九头蛇",
@@ -225,7 +296,8 @@ const equipments = observable({
       name: "冰霜之锤",
       description: "携带者也是一名极地英雄",
       icon: bszc,
-      compose: ["jryd", "jcz"]
+      compose: ["jryd", "jcz"],
+      classify: 'smz'
     },
     {
       name: "冰霜之心",
@@ -243,7 +315,8 @@ const equipments = observable({
       name: "法师之帽",
       description: "携带者也是一名魔法师",
       icon: fszm,
-      compose: ["jcz", "nszl"]
+      compose: ["jcz", "nszl"],
+      classify: 'special'
     },
     {
       name: "卢安娜的飓风",
@@ -255,7 +328,8 @@ const equipments = observable({
       name: "狂战士之斧",
       description: "佩戴者也归为狂战士",
       icon: kzszf,
-      compose: ["jcz", "qt"]
+      compose: ["jcz", "qt"],
+      classify: 'special'
     },
     {
       name: "饮血剑",
@@ -267,13 +341,15 @@ const equipments = observable({
       name: "自然之力",
       description: "可上阵人数+1",
       icon: zrzl,
-      compose: ["jcz", "jcz"]
+      compose: ["jcz", "jcz"],
+      classify: 'special'
     },
     {
       name: "破败王者之刃",
       description: "携带者也是一名剑士",
       icon: pbwzzr,
-      compose: ["jcz", "fqzg"]
+      compose: ["jcz", "fqzg"],
+      classify: 'special'
     }
   ],
 
