@@ -38,7 +38,7 @@ class Career extends Component {
                 <Radio
                   className="radio-item"
                   value={index}
-                  key={index}
+                  key={item + index}
                   checked={checked}
                 >
                   {item.career}
@@ -54,7 +54,7 @@ class Career extends Component {
               {career.people_number.map((number_people, number_index) => {
                 const [number, effect] = number_people;
                 return (
-                  <View key={number_index}>
+                  <View key={number_people + number_index}>
                     <Text className="career-effect-number">{number}</Text>
                     <Text className="career-effect-descript"> {effect}</Text>
                   </View>

@@ -24,13 +24,22 @@ class Cards extends Component {
   onSwithEquipment = event => {
     const equipment_name = event.detail.value;
     const {
-      equipments: { equipments }
+      equipments: { equipments, classify }
     } = this.props;
-    this.setState({
-      equipments_filtered: equipments.filter(item =>
-        item.compose.includes(equipment_name)
-      )
-    });
+
+    if (equipment_name in classify) {
+      this.setState({
+        equipments_filtered: equipments.filter(
+          item => item.classify == equipment_name
+        )
+      });
+    } else {
+      this.setState({
+        equipments_filtered: equipments.filter(item =>
+          item.compose.includes(equipment_name)
+        )
+      });
+    }
   };
 
   componentWillMount() {
@@ -42,7 +51,7 @@ class Cards extends Component {
 
   render() {
     const {
-      equipments: { components }
+      equipments: { components, classify }
     } = this.props;
     const { equipments_filtered } = this.state;
 
@@ -59,6 +68,17 @@ class Cards extends Component {
                   key={item + component_index}
                 >
                   {component_detail.name}
+                </Radio>
+              );
+            })}
+            {Object.keys(classify).map((item, classify_index) => {
+              return (
+                <Radio
+                  className="radio-item"
+                  value={item}
+                  key={item + classify_index}
+                >
+                  {classify[item]}
                 </Radio>
               );
             })}

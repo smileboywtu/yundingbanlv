@@ -16,8 +16,8 @@ class Hero extends Component {
         {names.map((hero_name, index) => {
           const hero_info = heros[hero_name];
           return (
-            <View className="hero-list-container" key={index}>
-              <View key={index}>
+            <View className="hero-list-container" key={hero_name + index}>
+              <View>
                 <Image className="hero-img" src={hero_info.icon}></Image>
               </View>
               <View className="hero-list-container-right">

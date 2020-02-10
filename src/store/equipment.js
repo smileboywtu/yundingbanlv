@@ -55,16 +55,17 @@ import fjzz from '../assets/equipments/fjzz.png'
 import qzst from '../assets/equipments/qzst.png'
 import swzr from '../assets/equipments/swzr.png'
 import jrzs from '../assets/equipments/jrzs.png'
+import bmhs from '../assets/equipments/bmhs.png'
 
 
 const equipments = observable({
 
   classify: {
-    "special":  "特殊装备",
+    "special": "特殊装备",
     "smz": "生命值",
     "mk": "魔抗",
     "jnsh": "技能伤害",
-    "hj": "护甲类",
+    "hjl": "护甲类",
     "gsl": "攻速类",
     "gjl": "攻击类",
     "flz": "法力值",
@@ -83,61 +84,71 @@ const equipments = observable({
       name: "死亡之刃",
       description: "击杀或助攻可获得一层被动： +15 攻击力",
       icon: swzr,
-      compose: ["bfdj", "bfdj"]
+      compose: ["bfdj", "bfdj"],
+      classify: 'gjl'
     },
     {
       name: "窃贼手套",
       description: "佩戴者装备 2 件临时装备，装备品质基于英雄等级（占三个装备格）",
       icon: qzst,
-      compose: ["qt", "qt"]
+      compose: ["qt", "qt"],
+      classify: 'bjsb'
     },
     {
       name: "伏击之爪",
       description: "佩戴者获得护盾，可格挡敌人技能，打破护盾将晕眩敌方 4 秒",
       icon: fjzz,
-      compose: ["jryd", "qt"]
+      compose: ["jryd", "qt"],
+      classify: 'bjsb'
     },
     {
       name: "水银",
       description: "在携带着被控制时，净化该控制效果，冷却时间为 3 秒",
       icon: sy,
-      compose: ["fjdp", "qt"]
+      compose: ["fjdp", "qt"],
+      classify: 'bjsb'
     },
     {
       name: "冰脉护手",
       description: "闪避时，创造一个冰霜领域，领域内敌人减缓 35% 攻速",
-      icon: zyzs,
-      compose: ["qt", "szj"]
+      icon: bmhs,
+      compose: ["qt", "szj"],
+      classify: 'bjsb'
     },
     {
-      name: "珠光护手",
+      name: "正义之手",
       description: "回合开始时，造成伤害 +40% 或攻击在命中时回复 40 生命值",
       icon: zyzs,
-      compose: ["nszl", "qt"]
+      compose: ["nszl", "qt"],
+      classify: 'bjsb'
     },
     {
       name: "珠光护手",
       description: "携带者的技能可以暴击",
       icon: zghs,
-      compose: ["wydb", "qt"]
+      compose: ["wydb", "qt"],
+      classify: 'bjsb'
     },
     {
       name: "复用型十字弩",
       description: "佩戴者死亡时装备至其他友军，每次装备提供额外 30% 攻速和暴击几率，无上限",
       icon: fyxszl,
-      compose: ["fqzg", "qt"]
+      compose: ["fqzg", "qt"],
+      classify: 'bjsb'
     },
     {
       name: "无尽之刃",
       description: "+20% 暴击几率 +125% 暴击伤害",
       icon: wjzr,
-      compose: ["bfdj", "qt"]
+      compose: ["bfdj", "qt"],
+      classify: 'bjsb'
     },
     {
       name: "灵风",
       description: "开局放逐一个敌军持续 6 秒",
       icon: lf,
-      compose: ["jryd", "fjdp"]
+      compose: ["jryd", "fjdp"],
+      classify: 'mk'
     },
     {
       name: "基克的先驱",
@@ -157,7 +168,8 @@ const equipments = observable({
       name: "地狱火熔渣",
       description: "佩戴者也视为炼狱",
       icon: dyhrz,
-      compose: ["wydb", "jcz"]
+      compose: ["wydb", "jcz"],
+      classify: 'jnsh'
     },
     {
       name: "狂徒铠甲",
@@ -170,127 +182,148 @@ const equipments = observable({
       name: "巨型九头蛇",
       description: "攻击对目标和目标身后的敌人造成 3% 最大生命值的伤害",
       icon: jxjts,
-      compose: ["fqzg", "jryd"]
+      compose: ["fqzg", "jryd"],
+      classify: 'gsl'
     },
     {
       name: "荆棘之甲",
       description: "自我缓和物理伤害的 100%（真实伤害）",
       icon: jjzj,
-      compose: ["szj", "szj"]
+      compose: ["szj", "szj"],
+      classify: 'hjl'
     },
     {
       name: "折剑者",
       description: "普攻 33% 的几率对敌人造成缴械 3 秒",
       icon: zjz,
-      compose: ["fjdp", "szj"]
+      compose: ["fjdp", "szj"],
+      classify: 'mk'
     },
     {
       name: "斯塔缇克电刃",
       description: "每三次普攻造成 3 个目标 100 溅射魔法伤害",
       icon: stdkdr,
-      compose: ["fqzg", "nszl"]
+      compose: ["fqzg", "nszl"],
+      classify: 'flz'
     },
     {
       name: "朔极之矛",
       description: "使用技能后每次攻击回复 18% 最大法力值",
       icon: sjzm,
-      compose: ["bfdj", "nszl"]
+      compose: ["bfdj", "nszl"],
+      classify: 'flz'
     },
     {
       name: "炽天使之拥",
       description: "每次技能释放获得 20 法力值",
       icon: ztszy,
-      compose: ["nszl", "nszl"]
+      compose: ["nszl", "nszl"],
+      classify: 'flz'
     },
     {
       name: "光之护符",
       description: "佩戴者也视为光",
       icon: gzhf,
-      compose: ["fjdp", "jcz"]
+      compose: ["fjdp", "jcz"],
+      classify: 'gjl'
     },
     {
       name: "救赎",
       description: "生命值 25% 时治疗附近所有友军 1200 点生命值",
       icon: js,
-      compose: ["nszl", "jryd"]
+      compose: ["nszl", "jryd"],
+      classify: 'flz'
     },
     {
       name: "蜥蜴长老之赐",
       description: "普攻造成 10% 灼伤，+2% 真实伤害",
       icon: xyzlzc,
-      compose: ["jryd", "szj"]
+      compose: ["jryd", "szj"],
+      classify: 'gjl'
     },
     {
       name: "疾射火炮",
       description: "攻击距离加倍",
       icon: jshp,
-      compose: ["fqzg", "fqzg"]
+      compose: ["fqzg", "fqzg"],
+      classify: 'gjl'
     },
     {
       name: "灭世者的死亡之帽",
       description: "增加 75% 的技能伤害",
       icon: mszdswzm,
-      compose: ["wydb", "wydb"]
+      compose: ["wydb", "wydb"],
+      classify: 'jnsh'
     },
     {
       name: "幻影之舞",
       description: "闪避所有暴击攻击",
       icon: hyzw,
-      compose: ["fqzg", "szj"]
+      compose: ["fqzg", "szj"],
+      classify: 'gsl'
     },
     {
       name: "莫雷洛秘典",
       description: "技能 10 秒内灼烧敌人最大生命值 10% 并禁止治疗；效果无法叠加",
       icon: mllmd,
-      compose: ["wydb", "jryd"]
+      compose: ["wydb", "jryd"],
+      classify: 'jnsh'
     },
     {
       name: "卢登的回声",
       description: "技能造成 150 点溅射伤害",
       icon: lddhs,
-      compose: ["wydb", "nszl"]
+      compose: ["wydb", "nszl"],
+      classify: 'jnsh'
     },
     {
       name: "钢铁烈焰之匣",
       description: "战斗前为自己和左右两格内英雄施加 8 秒 250 点护盾",
       icon: gtlyzj,
-      compose: ["wydb", "szj"]
+      compose: ["wydb", "szj"],
+      classify: 'hjl'
     },
     {
       name: "守护神板甲",
       description: "携带者也是一名守护神",
       icon: shsbj,
-      compose: ["jcz", "szj"]
+      compose: ["jcz", "szj"],
+      classify: 'flz'
     },
     {
       name: "离子火花",
       description: "敌人施法掉 100 血",
       icon: lzhh,
-      compose: ["wydb", "fjdp"]
+      compose: ["wydb", "fjdp"],
+      classify: 'jnsh'
     },
     {
       name: "肃静",
       description: "普通攻击有 50% 对敌人造成 3 秒沉默",
       icon: sj,
-      compose: ["nszl", "fjdp"]
+      compose: ["nszl", "fjdp"],
+      classify: 'mk'
     },
     {
       name: "海克斯科技枪刃",
       description: "+25% 全能吸血",
       icon: hkskjqz,
-      compose: ["bfdj", "wydb"]
+      compose: ["bfdj", "wydb"],
+      classify: 'jnsh'
     },
     {
       name: "鬼索的狂暴之刃",
       description: "每次攻击增加 5% 攻击速度，无上限",
       icon: gsdkbzr,
-      compose: ["fqzg", "wydb"]
+      compose: ["fqzg", "wydb"],
+      classify: 'gsl'
     },
     {
       name: "守护天使",
       description: "阵亡 2 秒后复活，复活后恢复 400 生命值",
       icon: shts,
-      compose: ["bfdj", "szj"]
+      compose: ["bfdj", "szj"],
+      classify: 'hjl'
     },
     {
       name: "冰霜之锤",
@@ -303,13 +336,15 @@ const equipments = observable({
       name: "冰霜之心",
       description: "邻近格子的敌人降低 20% 攻击速度",
       icon: bszx,
-      compose: ["nszl", "szj"]
+      compose: ["nszl", "szj"],
+      classify: 'hjl'
     },
     {
       name: "巨龙之爪",
       description: "装备者获得 50% 魔法抗性",
       icon: jlzz,
-      compose: ["fjdp", "fjdp"]
+      compose: ["fjdp", "fjdp"],
+      classify: 'mk'
     },
     {
       name: "法师之帽",
@@ -322,7 +357,8 @@ const equipments = observable({
       name: "卢安娜的飓风",
       description: "攻击两名额外敌人造成 50% 伤害",
       icon: landjf,
-      compose: ["fjdp", "fqzg"]
+      compose: ["fjdp", "fqzg"],
+      classify: 'mk'
     },
     {
       name: "狂战士之斧",
@@ -335,7 +371,8 @@ const equipments = observable({
       name: "饮血剑",
       description: "普攻攻击附带 40% 吸血",
       icon: yxj,
-      compose: ["fjdp", "bfdj"]
+      compose: ["fjdp", "bfdj"],
+      classify: 'mk'
     },
     {
       name: "自然之力",
