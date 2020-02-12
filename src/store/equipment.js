@@ -418,7 +418,7 @@ const equipments = observable({
       description: "特殊装备合成并必备道具"
     },
     "qt": {
-      name: "全套",
+      name: "拳套",
       icon: qt,
       description: "提供 +10% 暴击几率和 +10% 闪避几率"
     },
