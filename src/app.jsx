@@ -1,6 +1,5 @@
 import Taro, { Component } from '@tarojs/taro'
 import { Provider } from '@tarojs/mobx'
-import countStore from './store/countStore'
 import equipments from './store/equipment'
 import updateTime from './store/updateTime'
 import machanismStore from './store/machanism'

@@ -13,6 +13,7 @@ import lkd from '../assets/heros/lkd.jpg'
 import wlbe from '../assets/heros/wlbe.jpg'
 import jks from '../assets/heros/jks.jpg'
 import se from '../assets/heros/se.jpg'
+import mse from '../assets/heros/mse.png'
 import mdys from '../assets/heros/mdys.jpg'
 import alf from '../assets/heros/alf.jpg'
 import jl from '../assets/heros/jl.jpg'
@@ -31,7 +32,22 @@ import mytks from '../assets/heros/mytks.png'
 import ytks from '../assets/heros/ytks.jpg'
 import nss from '../assets/heros/nss.jpg'
 import mnss from '../assets/heros/mnss.png'
-
+import man from '../assets/heros/man.png'
+import maze from '../assets/heros/maze.png'
+import mmezh from '../assets/heros/mmezh.png'
+import mjl from '../assets/heros/mjl.png'
+import malf from '../assets/heros/malf.png'
+import mmdys from '../assets/heros/mmdys.png'
+import mwlbe from '../assets/heros/mwlbe.png'
+import mlkd from '../assets/heros/mlkd.png'
+import mxjd from '../assets/heros/mxjd.png'
+import mkzk from '../assets/heros/mkzk.png'
+import maw from '../assets/heros/maw.png'
+import aw from '../assets/heros/aw.jpg'
+import mk from '../assets/heros/mk.jpg'
+import mmk from '../assets/heros/mmk.png'
+import nk from '../assets/heros/nk.jpg'
+import mnk from '../assets/heros/mnk.png'
 
 
 const machanismStore = observable({
@@ -65,10 +81,38 @@ const machanismStore = observable({
         [3, "增加召唤生物30%的生命值和持续时间"],
         [6, "增加召唤生物120%的生命值和持续时间"]
       ]
+    },
+    {
+      career: "德鲁伊",
+      people: ["艾翁", "茂凯", "妮蔻"],
+      people_number: [
+        [2, "德鲁伊获得每秒40点的生命回复"]
+      ]
     }
   ],
 
   heros: {
+    "妮蔻": {
+      micon: mnk,
+      icon: nk,
+      careers: ["森林", "德鲁伊"],
+      skill: "盛开花种",
+      description: "妮蔻朝一名随机的目标扔出一粒种子。种子可爆炸三次，每次爆炸的半径都会提升。每次爆炸会对命中的所有敌人造成伤害。"
+    },
+    "茂凯": {
+      micon: mmk,
+      icon: mk,
+      careers: ["森林", "德鲁伊"],
+      skill: "吸元秘术",
+      description: "在被一个敌方技能造成伤害后，茂凯的下次攻击会治疗自身生命值。"
+    },
+    "艾翁": {
+      micon: maw,
+      icon: aw,
+      careers: ["森林", "德鲁伊"],
+      skill: "种豆得瓜",
+      description: "艾翁为生命值最低的友军提供一层吸收伤害的护盾，并持续一段时间。"
+    },
     "内瑟斯": {
       micon: mnss,
       icon: nss,
@@ -92,42 +136,49 @@ const machanismStore = observable({
     },
 
     "安妮": {
+      micon: man,
       icon: an,
       careers: ["炼狱", "召唤使"],
       skill: "提伯斯",
       description: "安妮在目标附近召唤提伯斯，对所有邻近敌人造成魔法伤害。提伯斯会在该战斗环节的剩余时间里进行战斗，直到被击杀为止，每次普通攻击造成魔法伤害。提伯斯在场上时，安妮不会获得法力值。"
     },
     "阿兹尔": {
+      micon: maze,
       icon: aze,
       careers: ["沙漠", "召唤使"],
       skill: "沙兵现身",
       description: "阿兹尔在一名随机的敌人附近召唤一个沙漠士兵。在阿兹尔攻击时，沙漠士兵会对附近的敌人进行攻击，沿直线造成魔法伤害。沙漠士兵持续6秒。"
     },
     "玛尔扎哈": {
+      micon: mmezh,
       icon: mezh,
       careers: ["影", "召唤使"],
       skill: "暗影虫群",
       description: "玛尔扎哈召唤多个影灵。影灵的每次攻击造成魔法伤害。影灵会从已激活的【影】元素特质加成中获益。"
     },
     "婕拉": {
+      micon: mjl,
       icon: jl,
       careers: ["炼狱", "召唤使"],
       skill: "狂野生长",
       description: "婕拉在棋盘边缘的随机位置召唤火焰喷射者。它们会攻击距离最近的敌人3秒，每次攻击造成魔法伤害。"
     },
     "奥拉夫": {
+      micon: malf,
       icon: alf,
       careers: ["极地", "狂战士"],
       skill: "诸神黄昏",
       description: "奥拉夫获得攻击速度，并基于已损失生命值获得生命偷取，并且在该回合的剩余时间里免疫控制效果。"
     },
     "蒙多医生": {
+      micon: mmdys,
       icon: mdys,
       careers: ["剧毒", "狂战士"],
       skill: "肾上腺激素",
       description: "蒙多医生创造一团持续一段时间的护体毒云。毒云每秒对附近的敌人造成基于他最大生命值的魔法伤害，并且自身获得相当于基于伤害值的治疗效果。"
     },
     "赛恩": {
+      micon: mse,
       icon: se,
       careers: ["影", "狂战士"],
       skill: "残虐猛击",
@@ -141,18 +192,21 @@ const machanismStore = observable({
       description: "贾克斯在一段时间里闪避所有即将到来的攻击，随后对附近所有敌人进行打击，造成魔法伤害和1.5秒的晕眩。"
     },
     "沃利贝尔": {
+      micon: mwlbe,
       icon: wlbe,
       careers: ["雷霆", "极地", "狂战士"],
       skill: "狂野之咬",
       description: "沃利贝尔撕咬他的目标，造成魔法伤害。如果目标的生命值低于35%，这个技能会将目标击杀并回满沃利贝尔的法力值。"
     },
     "雷克顿": {
+      micon: mlkd,
       icon: lkd,
       careers: ["沙漠", "狂战士"],
       skill: "暴君狂击",
       description: "雷克顿挥舞他的战刃，对附近的敌人造成伤害并且每命中一个敌人就会治疗他自身生命值。"
     },
     "辛吉德": {
+      micon: mxjd,
       icon: xjd,
       careers: ["剧毒", "炼金师"],
       skill: "剧毒踪迹",
@@ -188,6 +242,7 @@ const machanismStore = observable({
       description: "被动：魔腾的攻击每命中3次后会获得强化，对所有邻近的单位造成伤害并附加攻击特效，还会治疗自身相当于伤害值的生命值。"
     },
     "卡兹克": {
+      micon: mkzk,
       icon: kzk,
       careers: ["沙漠", "刺客"],
       skill: "荒芜来袭",
